@@ -3,17 +3,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Y2K Cyber-Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ogulcan Gurelli | Cyber-Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script>
+        // Polyfill process.env to prevent crashes on static hosting like GitHub Pages
+        if (typeof process === 'undefined') {
+            window.process = { env: { API_KEY: '' } };
+        }
+    </script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            cursor: url('https://cur.cursors-4u.net/others/oth-5/oth465.cur'), auto;
+            color: #000;
+            background-color: #f0f0f0;
         }
         .font-retro { font-family: 'VT323', monospace; }
-        .font-mono-tech { font-family: 'Space+Mono', monospace; }
+        .font-mono-tech { font-family: 'Space Mono', monospace; }
         
         @keyframes scanline {
             0% { transform: translateY(-100%); }
@@ -25,27 +32,18 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.05) 50%, transparent 100%);
+            background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.03) 50%, transparent 100%);
             animation: scanline 8s linear infinite;
             pointer-events: none;
-            z-index: 50;
+            z-index: 100;
         }
         .bg-grid {
             background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
             background-size: 20px 20px;
         }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
         .retro-border {
             border: 2px solid black;
             box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
-        }
-        .retro-button-active:active {
-            box-shadow: 1px 1px 0px 0px rgba(0,0,0,1);
-            transform: translate(2px, 2px);
         }
     </style>
 <script type="importmap">
@@ -59,7 +57,7 @@
 }
 </script>
 </head>
-<body class="bg-[#f0f0f0] bg-grid overflow-x-hidden">
+<body class="bg-grid overflow-x-hidden">
     <div id="root"></div>
     <div class="scanline"></div>
 </body>
