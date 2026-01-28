@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { PROJECTS } from '../constants';
+import { PROJECTS } from '../constants.tsx';
 
 const ProjectGallery: React.FC = () => {
   const accentColors = [
@@ -64,6 +64,8 @@ const ProjectGallery: React.FC = () => {
                 
                 <a 
                   href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`w-full text-center py-2 font-bold uppercase border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all flex items-center justify-center gap-2 active:shadow-none active:translate-x-1 active:translate-y-1 ${titleBgColors[index % titleBgColors.length]} hover:brightness-110`}
                 >
                   <span className="text-black">Launch Module</span>

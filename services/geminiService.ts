@@ -1,6 +1,6 @@
 
 import { GoogleGenAI, Chat, GenerateContentResponse } from "@google/genai";
-import { SYSTEM_PROMPT } from "../constants";
+import { SYSTEM_PROMPT } from "../constants.tsx";
 
 class GeminiService {
   private ai: GoogleGenAI | null = null;

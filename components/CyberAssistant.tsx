@@ -1,8 +1,8 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { geminiService } from '../services/geminiService';
-import { Message } from '../types';
-import RetroWindow from './RetroWindow';
+import { geminiService } from '../services/geminiService.ts';
+import { Message } from '../types.ts';
+import RetroWindow from './RetroWindow.tsx';
 
 const CyberAssistant: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

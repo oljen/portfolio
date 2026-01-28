@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
-import Hero from './components/Hero';
-import ProjectGallery from './components/ProjectGallery';
-import SkillGrid from './components/SkillGrid';
-import CyberAssistant from './components/CyberAssistant';
+import Hero from './components/Hero.tsx';
+import ProjectGallery from './components/ProjectGallery.tsx';
+import SkillGrid from './components/SkillGrid.tsx';
+import CyberAssistant from './components/CyberAssistant.tsx';
 
 const App: React.FC = () => {
   const [booting, setBooting] = useState(true);

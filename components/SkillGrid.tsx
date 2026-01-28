@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { SKILLS } from '../constants';
-import RetroWindow from './RetroWindow';
+import { SKILLS } from '../constants.tsx';
+import RetroWindow from './RetroWindow.tsx';
 
 const SkillGrid: React.FC = () => {
   return (
