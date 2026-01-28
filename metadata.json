@@ -1,0 +1,8 @@
+{
+  "name": "Y2K Cyber-Portfolio",
+  "description": "A high-performance, aesthetically pleasing portfolio website with a clean Y2K retro-futuristic design, featuring an interactive AI companion powered by Gemini.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
